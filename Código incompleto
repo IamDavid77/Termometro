@@ -1,0 +1,14 @@
+//David Perez Diaz
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+#define pinTemp A0
+
+void setup() {
+  Serial.begin( 9600);
+  pinMode( pinTemp,INPUT );
+  
+  lcd.begin(16, 2);
+  lcd.print("Temp Sala");
+}
